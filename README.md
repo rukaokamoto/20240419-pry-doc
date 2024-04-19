@@ -21,12 +21,6 @@ Copyright (C) 2024 3akurur
 
 # About this contents
 
-<!-- GitHub Pages: [https://kaosf.github.io/20230803-git-tag](https://kaosf.github.io/20230803-git-tag)
-
-Repository: [kaosf/20230803-git-tag - GitHub](https://github.com/kaosf/20230803-git-tag) -->
-
-<!-- ![GitHub Pages QR](gh-pages-qr.svg) -->
-
 # なぜ組み込みメソッドの定義箇所を探したくなったか
 
 # なぜ組み込みメソッドの定義箇所を探したくなったか 2
