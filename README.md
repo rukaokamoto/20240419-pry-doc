@@ -47,11 +47,11 @@ logs = [[lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000], [lat: 35.000, ln
 実際の実装は ```each_with_index``` を使って以下の様な感じで行いました。
 
 ```rb
-array = Array.new(10) { rand(1..100) } # 実際は緯度経度情報
-array.each_with_index do |value, index|
-  next_value = array[index + 1]
+logs = [[lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000]]
+logs.each_with_index do |value, index|
+  next_value = logs[index + 1]
   break if next_value.nil?
-  p [value, next_value] # 実際は緯度経度の計算処理
+  # 緯度経度の計算処理
 end
 ```
 
@@ -60,8 +60,8 @@ end
 ただ、他の実装中にプロジェクト内で ```each_cons``` というメソッドを知り、以下の様に書き直せる事に気付きました。
 
 ```rb
-array = Array.new(10) { rand(1..100) } # 実際は緯度経度情報
-array.each_cons(2){|v| p v # 実際は緯度経度の計算処理
+logs = [[lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000]]
+array.each_cons(2){|v| # 緯度経度の計算処理 }
 ```
 
 # なぜ組み込みメソッドの定義箇所を探したくなったか 5
