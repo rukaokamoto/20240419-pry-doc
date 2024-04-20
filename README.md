@@ -11,6 +11,11 @@ class: invert
 
 3akurur
 
+![height:200](profile.jpg)
+github
+
+![height:200](qr_github.png)
+
 # License
 
 CC BY-NC-SA 4.0
@@ -21,13 +26,19 @@ Copyright (C) 2024 3akurur
 
 # About this contents
 
+GitHub Pages: [https://3akurur.github.io/20240419-pry-doc/](https://3akurur.github.io/20240419-pry-doc/)
+
+Repository: [https://github.com/3akurur/20240419-pry-doc - GitHub](https://github.com/3akurur/20240419-pry-doc)
+
+![height:200](qr_github_pages.png)
+
 # なぜ組み込みメソッドの定義箇所を探したくなったか
 
 # なぜ組み込みメソッドの定義箇所を探したくなったか 2
 
-緯度経度の情報が入った配列から、総走行距離を計算したい
+緯度経度の情報が入った配列から、総走行距離を計算したい。
 
-```
+```sh
 logs = [[lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000]]
 ```
 
@@ -71,17 +82,17 @@ gem install pry-doc
 
 # 実際に確認してみよう！ 2
 
-```
+```rb
 pry
 require "pry-doc"
 $ Enumerator#each_cons
 ```
 
-実行すると次の様な出力が返ってきます
+実行すると次の様な出力が返ってきます。
 
 # 実際に確認してみよう！ 3
 
-```
+```c
 From: enum.c (C Method):
 Owner: Enumerable
 Visibility: public
@@ -116,16 +127,18 @@ click to toggle source
 
 # 実際に確認してみよう！ 4
 
-ただ、他のメソッドも追っていっても何書いてるかよく分からない。。
-~~引数が0以下だとerrorを返すとこだけわかる。~~ <-誰でも分かる
+ただ、他のメソッドも確認しないといけないし今の知識では追いかけるのは難しそう。
+~~分かるとこと言えば引数が0以下だとerrorを返すとこくらい。~~ <-誰でも分かる。
 
 # 使用例を確認しよう
 
-読んでも分からないので、使用例をコンソールで確認する方法を紹介します。
+読んでも分からないので今回の調査で知った、コンソールでメソッドの使用例を確認する方法を紹介します。
 
 # 使用例を確認しよう 2
 
-```
+先ほどの```$ Enumerator#each_cons``` の先頭に付けた```$``` を ```?``` に置き換えると、定義に加えて使用例が確認出来ます。
+
+```rb
 pry
 require "pry-doc"
 ? Enumerator#each_cons
@@ -133,7 +146,7 @@ require "pry-doc"
 
 # 使用例を確認しよう 3
 
-```
+```rb
 Calls the block with each successive overlapped n-tuple of elements;
 returns self:
 
@@ -147,17 +160,16 @@ returns self:
   a # => [[[:foo, 0], [:bar, 1]], [[:bar, 1], [:baz, 2]], [[:baz, 2], [:bam, 3]]]
 
 With no block given, returns an Enumerator.
+...定義
 ```
-
-※定義部分の下に表示されるが今回は長くなるので割愛
 
 # 使用例を確認しよう 4
 
-以下も同じ意味です。
+以下は同じ意味です。
 
-```
+```rb
 # $ Enumerator#each_cons
-$ show-source
+$ show-source Enumerator#each_cons
 
 # ? show-source -d
 show-source -d Enumerator#each_cons
@@ -165,14 +177,16 @@ show-source -d Enumerator#each_cons
 
 # 使用例を確認しよう 5
 
-```
+```ri``` コマンドで使用例だけを確認出来ます。
+
+```rb
 pry
 ri Enumerator#each_cons
 ```
 
 # 使用例を確認しよう 6
 
-```
+```rb
 Enumerator#each_cons
 
 (from ruby core)

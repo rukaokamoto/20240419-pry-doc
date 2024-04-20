@@ -15,6 +15,9 @@
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="author">Author</h1>
 <p>3akurur</p>
+<p><img src="profile.jpg" alt="" style="height:200px;" /><br />
+github</p>
+<p><img src="qr_github.png" alt="" style="height:200px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="license">License</h1>
@@ -24,14 +27,17 @@
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="about-this-contents">About this contents</h1>
+<p>GitHub Pages: <a href="https://3akurur.github.io/20240419-pry-doc/">https://3akurur.github.io/20240419-pry-doc/</a></p>
+<p>Repository: <a href="https://github.com/3akurur/20240419-pry-doc">https://github.com/3akurur/20240419-pry-doc - GitHub</a></p>
+<p><img src="qr_github_pages.png" alt="" style="height:200px;" /></p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E3%81%AA%E3%81%9C%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AE%E5%AE%9A%E7%BE%A9%E7%AE%87%E6%89%80%E3%82%92%E6%8E%A2%E3%81%97%E3%81%9F%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%8B">なぜ組み込みメソッドの定義箇所を探したくなったか</h1>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E3%81%AA%E3%81%9C%E7%B5%84%E3%81%BF%E8%BE%BC%E3%81%BF%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%81%AE%E5%AE%9A%E7%BE%A9%E7%AE%87%E6%89%80%E3%82%92%E6%8E%A2%E3%81%97%E3%81%9F%E3%81%8F%E3%81%AA%E3%81%A3%E3%81%9F%E3%81%8B-2">なぜ組み込みメソッドの定義箇所を探したくなったか 2</h1>
-<p>緯度経度の情報が入った配列から、総走行距離を計算したい</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>logs = [[lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000]]
+<p>緯度経度の情報が入った配列から、総走行距離を計算したい。</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-sh">logs = [[lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000], [lat: 35.000, lng:135.000]]
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
@@ -69,35 +75,35 @@ gem install pry-doc
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E5%AE%9F%E9%9A%9B%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86-2">実際に確認してみよう！ 2</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>pry
-require &quot;pry-doc&quot;
-$ Enumerator#each_cons
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-rb">pry
+<span class="hljs-keyword">require</span> <span class="hljs-string">&quot;pry-doc&quot;</span>
+<span class="hljs-variable">$ </span><span class="hljs-title class_">Enumerator</span><span class="hljs-comment">#each_cons</span>
 </code></pre>
-<p>実行すると次の様な出力が返ってきます</p>
+<p>実行すると次の様な出力が返ってきます。</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E5%AE%9F%E9%9A%9B%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86-3">実際に確認してみよう！ 3</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>From: enum.c (C Method):
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-c">From: <span class="hljs-keyword">enum</span>.c (C Method):
 Owner: Enumerable
 Visibility: public
 Signature: each_cons(arg1)
-Number of lines: 16
+Number of lines: <span class="hljs-number">16</span>
 
-static VALUE
-enum_each_cons(VALUE obj, VALUE n)
+<span class="hljs-type">static</span> VALUE
+<span class="hljs-title function_">enum_each_cons</span><span class="hljs-params">(VALUE obj, VALUE n)</span>
 {
-    long size = NUM2LONG(n);
-    struct MEMO *memo;
-    int arity;
+    <span class="hljs-type">long</span> size = NUM2LONG(n);
+    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">MEMO</span> *<span class="hljs-title">memo</span>;</span>
+    <span class="hljs-type">int</span> arity;
 
-    if (size &lt;= 0) rb_raise(rb_eArgError, &quot;invalid size&quot;);
-    RETURN_SIZED_ENUMERATOR(obj, 1, &amp;n, enum_each_cons_size);
+    <span class="hljs-keyword">if</span> (size &lt;= <span class="hljs-number">0</span>) rb_raise(rb_eArgError, <span class="hljs-string">&quot;invalid size&quot;</span>);
+    RETURN_SIZED_ENUMERATOR(obj, <span class="hljs-number">1</span>, &amp;n, enum_each_cons_size);
     arity = rb_block_arity();
-    if (enum_size_over_p(obj, size)) return obj;
+    <span class="hljs-keyword">if</span> (enum_size_over_p(obj, size)) <span class="hljs-keyword">return</span> obj;
     memo = MEMO_NEW(rb_ary_new2(size), dont_recycle_block_arg(arity), size);
-    rb_block_call(obj, id_each, 0, 0, each_cons_i, (VALUE)memo);
+    rb_block_call(obj, id_each, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, each_cons_i, (VALUE)memo);
 
-    return obj;
+    <span class="hljs-keyword">return</span> obj;
 }
 </code></pre>
 </section>
@@ -110,79 +116,81 @@ click to toggle source</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E5%AE%9F%E9%9A%9B%E3%81%AB%E7%A2%BA%E8%AA%8D%E3%81%97%E3%81%A6%E3%81%BF%E3%82%88%E3%81%86-4">実際に確認してみよう！ 4</h1>
-<p>ただ、他のメソッドも追っていっても何書いてるかよく分からない。。<br />
-<s>引数が0以下だとerrorを返すとこだけわかる。</s> &lt;-誰でも分かる</p>
+<p>ただ、他のメソッドも確認しないといけないし今の知識では追いかけるのは難しそう。<br />
+<s>分かるとこと言えば引数が0以下だとerrorを返すとこくらい。</s> &lt;-誰でも分かる。</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E4%BD%BF%E7%94%A8%E4%BE%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86">使用例を確認しよう</h1>
-<p>読んでも分からないので、使用例をコンソールで確認する方法を紹介します。</p>
+<p>読んでも分からないので今回の調査で知った、コンソールでメソッドの使用例を確認する方法を紹介します。</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E4%BD%BF%E7%94%A8%E4%BE%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86-2">使用例を確認しよう 2</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>pry
-require &quot;pry-doc&quot;
-? Enumerator#each_cons
+<p>先ほどの<code>$ Enumerator#each_cons</code> の先頭に付けた<code>$</code> を <code>?</code> に置き換えると、定義に加えて使用例が確認出来ます。</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-rb">pry
+<span class="hljs-keyword">require</span> <span class="hljs-string">&quot;pry-doc&quot;</span>
+? <span class="hljs-title class_">Enumerator</span><span class="hljs-comment">#each_cons</span>
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E4%BD%BF%E7%94%A8%E4%BE%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86-3">使用例を確認しよう 3</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>Calls the block with each successive overlapped n-tuple of elements;
-returns self:
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-rb"><span class="hljs-title class_">Calls</span> the block with each successive overlapped n-tuple of elements;
+returns <span class="hljs-symbol">self:</span>
 
   a = []
-  (1..5).each_cons(3) {|element| a.push(element) }
-  a # =&gt; [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+  (<span class="hljs-number">1</span>..<span class="hljs-number">5</span>).each_cons(<span class="hljs-number">3</span>) {|<span class="hljs-params">element</span>| a.push(element) }
+  a <span class="hljs-comment"># =&gt; [[1, 2, 3], [2, 3, 4], [3, 4, 5]]</span>
 
   a = []
-  h = {foo: 0,  bar: 1, baz: 2, bam: 3}
-  h.each_cons(2) {|element| a.push(element) }
-  a # =&gt; [[[:foo, 0], [:bar, 1]], [[:bar, 1], [:baz, 2]], [[:baz, 2], [:bam, 3]]]
+  h = {<span class="hljs-symbol">foo:</span> <span class="hljs-number">0</span>,  <span class="hljs-symbol">bar:</span> <span class="hljs-number">1</span>, <span class="hljs-symbol">baz:</span> <span class="hljs-number">2</span>, <span class="hljs-symbol">bam:</span> <span class="hljs-number">3</span>}
+  h.each_cons(<span class="hljs-number">2</span>) {|<span class="hljs-params">element</span>| a.push(element) }
+  a <span class="hljs-comment"># =&gt; [[[:foo, 0], [:bar, 1]], [[:bar, 1], [:baz, 2]], [[:baz, 2], [:bam, 3]]]</span>
 
-With no block given, returns an Enumerator.
+<span class="hljs-title class_">With</span> no block given, returns an <span class="hljs-title class_">Enumerator</span>.
+...定義
 </code></pre>
-<p>※定義部分の下に表示されるが今回は長くなるので割愛</p>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E4%BD%BF%E7%94%A8%E4%BE%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86-4">使用例を確認しよう 4</h1>
-<p>以下も同じ意味です。</p>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code># $ Enumerator#each_cons
-$ show-source
+<p>以下は同じ意味です。</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-rb"><span class="hljs-comment"># $ Enumerator#each_cons</span>
+<span class="hljs-variable">$ </span>show-source <span class="hljs-title class_">Enumerator</span><span class="hljs-comment">#each_cons</span>
 
-# ? show-source -d
-show-source -d Enumerator#each_cons
+<span class="hljs-comment"># ? show-source -d</span>
+show-source -d <span class="hljs-title class_">Enumerator</span><span class="hljs-comment">#each_cons</span>
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E4%BD%BF%E7%94%A8%E4%BE%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86-5">使用例を確認しよう 5</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>pry
-ri Enumerator#each_cons
+<p><code>ri</code> コマンドで使用例だけを確認出来ます。</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-rb">pry
+ri <span class="hljs-title class_">Enumerator</span><span class="hljs-comment">#each_cons</span>
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
 <h1 id="%E4%BD%BF%E7%94%A8%E4%BE%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%97%E3%82%88%E3%81%86-6">使用例を確認しよう 6</h1>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code>Enumerator#each_cons
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-rb"><span class="hljs-title class_">Enumerator</span><span class="hljs-comment">#each_cons</span>
 
 (from ruby core)
-Implementation from Enumerable
+<span class="hljs-title class_">Implementation</span> from <span class="hljs-title class_">Enumerable</span>
 ------------------------------------------------------------------------
-  each_cons(n) { ... } -&gt;  self
+  each_cons(n) { ... } -&gt;  <span class="hljs-variable language_">self</span>
   each_cons(n)         -&gt;  enumerator
 
 ------------------------------------------------------------------------
 
-Calls the block with each successive overlapped n-tuple of
-elements; returns self:
+<span class="hljs-title class_">Calls</span> the block with each successive overlapped n-tuple of
+elements; returns <span class="hljs-symbol">self:</span>
 
   a = []
-  (1..5).each_cons(3) {|element| a.push(element) }
-  a # =&gt; [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+  (<span class="hljs-number">1</span>..<span class="hljs-number">5</span>).each_cons(<span class="hljs-number">3</span>) {|<span class="hljs-params">element</span>| a.push(element) }
+  a <span class="hljs-comment"># =&gt; [[1, 2, 3], [2, 3, 4], [3, 4, 5]]</span>
 
   a = []
-  h = {foo: 0,  bar: 1, baz: 2, bam: 3}
-  h.each_cons(2) {|element| a.push(element) }
-  a # =&gt; [[[:foo, 0], [:bar, 1]], [[:bar, 1], [:baz, 2]], [[:baz, 2], [:bam, 3]]]
+  h = {<span class="hljs-symbol">foo:</span> <span class="hljs-number">0</span>,  <span class="hljs-symbol">bar:</span> <span class="hljs-number">1</span>, <span class="hljs-symbol">baz:</span> <span class="hljs-number">2</span>, <span class="hljs-symbol">bam:</span> <span class="hljs-number">3</span>}
+  h.each_cons(<span class="hljs-number">2</span>) {|<span class="hljs-params">element</span>| a.push(element) }
+  a <span class="hljs-comment"># =&gt; [[[:foo, 0], [:bar, 1]], [[:bar, 1], [:baz, 2]], [[:baz, 2], [:bam, 3]]]</span>
 
-With no block given, returns an Enumerator.
+<span class="hljs-title class_">With</span> no block given, returns an <span class="hljs-title class_">Enumerator</span>.
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-class="invert" data-heading-divider="1" lang="ja-JP" class="invert" style="--class:invert;--heading-divider:1;">
